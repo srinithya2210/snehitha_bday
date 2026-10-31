@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Snehitha Premier League 2026</title>
+<meta name="theme-color" content="#07110b">
+<style>
+:root{--night:#07110b;--green:#0f2a1d;--green2:#173a28;--gold:#b99a53;--gold2:#d4bd85;--ivory:#f3ecd9;--paper:#efe5cb;--ink:#2a2a22;--seam:#8c2b2b;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ivory);font:18px/1.65 var(--serif);padding-bottom:42px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+section{position:relative;padding:clamp(5rem,11vw,9rem) 1.5rem}
+.wrap{max-width:1040px;margin:0 auto;position:relative}
+h2{font-weight:400;font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.08}
+.sans{font-family:var(--sans)}
+.btn{font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;padding:1rem 2rem;border:1px solid var(--gold);color:var(--gold2);transition:.25s}
+.btn:hover{background:var(--gold);color:var(--night)}
+.cut{margin-top:-4.5vw;padding-top:calc(4.5vw + clamp(5rem,11vw,9rem));clip-path:polygon(0 4.5vw,100% 0,100% 100%,0 100%)}
+.cut.r{clip-path:polygon(0 0,100% 4.5vw,100% 100%,0 100%)}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:50}
+.ticker{position:fixed;bottom:0;left:0;right:0;height:42px;z-index:50;display:flex;align-items:center;background:#050b07;border-top:1px solid var(--gold);overflow:hidden;font:.8rem var(--sans);letter-spacing:.05em}
+.ticker b{background:var(--gold);color:var(--night);padding:0 1rem;height:100%;display:flex;align-items:center;letter-spacing:.14em;white-space:nowrap;z-index:2}
+.track{display:flex;white-space:nowrap;animation:mq 70s linear infinite}
+.track span{padding:0 2.2rem;color:#d8d1ba}.track span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--seam);margin-right:.9rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;background:linear-gradient(#030806,#0a1c13 60%,#12331f)}
+.stars{position:absolute;inset:0;background:radial-gradient(1px 1px at 8% 14%,#fff9 50%,transparent),radial-gradient(1px 1px at 27% 8%,#fff7 50%,transparent),radial-gradient(1.5px 1.5px at 44% 20%,#fff9 50%,transparent),radial-gradient(1px 1px at 63% 10%,#fff8 50%,transparent),radial-gradient(1px 1px at 81% 18%,#fff7 50%,transparent),radial-gradient(1.5px 1.5px at 93% 6%,#fff9 50%,transparent);animation:tw 5s infinite alternate}
+@keyframes tw{to{opacity:.55}}
+.lamp{position:absolute;top:0;width:min(42vw,430px);height:80%;opacity:0;animation:on 1.6s forwards}
+.lamp::before{content:"";position:absolute;top:1rem;left:50%;transform:translateX(-50%);width:66px;height:16px;border-radius:3px;background:radial-gradient(circle,#fff6d6 42%,transparent 48%) 0 0/11px 16px,#1b2a20;box-shadow:0 0 34px 8px rgba(255,246,214,.5)}
+.lamp::after{content:"";position:absolute;inset:2.4rem 0 0;background:linear-gradient(rgba(255,248,225,.3),transparent 88%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%)}
+.lamp:nth-child(3){left:-6%;animation-delay:.3s}.lamp:nth-child(4){left:22%;animation-delay:.7s}.lamp:nth-child(5){right:22%;animation-delay:1.1s}.lamp:nth-child(6){right:-6%;animation-delay:1.5s}
+@keyframes on{0%{opacity:0}12%{opacity:.9}20%{opacity:.1}34%{opacity:.8}42%{opacity:.3}60%,100%{opacity:1}}
+.crowd{position:absolute;left:0;right:0;bottom:21vh;height:13vh;opacity:0;animation:fade 2s 1.8s forwards;background:radial-gradient(circle,#d4bd85 0 1.2px,transparent 1.6px) 0 0/11px 11px,radial-gradient(circle,#f3ecd9 0 1px,transparent 1.5px) 5px 5px/13px 13px;-webkit-mask-image:linear-gradient(transparent,#000 60%,transparent);mask-image:linear-gradient(transparent,#000 60%,transparent)}
+.crowd::after{content:"";position:absolute;inset:0;background:inherit;animation:tw 2.4s infinite alternate;mix-blend-mode:screen;opacity:.5}
+@keyframes fade{to{opacity:.55}}
+.pitch{position:absolute;bottom:0;left:50%;width:170%;height:75vh;transform:translateX(-50%) perspective(640px) rotateX(70deg);transform-origin:bottom;background:repeating-linear-gradient(90deg,#17452c 0 5%,#123a25 5% 10%);border-radius:50% 50% 0 0/20% 20% 0 0;-webkit-mask-image:linear-gradient(transparent,#000 25%);mask-image:linear-gradient(transparent,#000 25%)}
+.pitch i{position:absolute;left:46%;width:8%;top:20%;bottom:0;background:#b9a46b;opacity:.45}
+.hero-in{position:relative;z-index:3;display:grid;gap:1.4rem;justify-items:center;padding:0 .5rem}
+.fix{font:.82rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);opacity:0;animation:rise 1s 1.9s forwards}
+h1{font-weight:400;font-size:clamp(2.3rem,8.4vw,6rem);line-height:1.02;letter-spacing:.05em;text-transform:uppercase}
+.w{display:inline-block;white-space:nowrap;margin-right:.28em}
+.ch{display:inline-block;opacity:0;animation:ch .9s forwards}
+@keyframes ch{from{opacity:0;filter:blur(10px);transform:translateY(22px) scale(1.15)}to{opacity:1;filter:none;transform:none}}
+.ed{font:clamp(.8rem,2vw,1rem) var(--sans);letter-spacing:.55em;color:var(--gold);padding-left:.55em;opacity:0;animation:rise 1s 3.6s forwards}
+.bug{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem 1.8rem;font-family:var(--sans);padding:.9rem 1.4rem;background:rgba(5,11,7,.78);border-top:2px solid var(--gold);border-bottom:1px solid rgba(185,154,83,.4)}
+.bug div{text-align:left;padding-left:.8rem;border-left:1px solid var(--gold);opacity:0;animation:rise .6s forwards}
+.bug small{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--gold2)}.bug b{font-weight:400;font-size:.95rem;letter-spacing:.1em}
+.bug div:nth-child(1){animation-delay:4s}.bug div:nth-child(2){animation-delay:4.2s}.bug div:nth-child(3){animation-delay:4.4s}.bug div:nth-child(4){animation-delay:4.6s}
+.hero .btn{opacity:0;animation:rise .8s 5s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* player */
+.player{background:var(--green);overflow:hidden}
+.n19{position:absolute;right:-2vw;top:-4rem;font-size:clamp(11rem,34vw,26rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(185,154,83,.35);pointer-events:none;user-select:none}
+.role{font:.82rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin:.4rem 0 2rem}
+.pname{font-size:clamp(3rem,11vw,7.5rem);line-height:.95;letter-spacing:.03em;text-transform:uppercase}
+.bars{display:grid;gap:1rem;max-width:560px;margin:2.5rem 0 3.5rem;font-family:var(--sans);font-size:.88rem}
+.bar{display:grid;grid-template-columns:150px 1fr auto;gap:1rem;align-items:center}
+.bar i{display:block;height:6px;background:rgba(243,236,217,.12)}.bar i u{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.in .bar i u{width:var(--w)}.bar em{font-style:normal;color:var(--gold2);font-size:.78rem}
+.l3{display:flex;max-width:640px;margin-bottom:1rem;transform:translateX(-120%);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.l3.in{transform:none}
+.l3 b{background:var(--gold);color:var(--night);font:2rem/1 var(--serif);padding:.9rem 1rem 0;display:block}
+.l3 p{background:rgba(5,11,7,.88);padding:.9rem 1.4rem;border-bottom:2px solid var(--gold);font-style:italic}
+
+/* highlights */
+.hl{background:var(--night)}
+.reel{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 0 2rem;margin:0 -1.5rem;padding-inline:1.5rem;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.tk{flex:0 0 min(78vw,300px);height:380px;scroll-snap-align:center;perspective:1100px;text-align:left}
+.tk>div{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.tk.f>div{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:1.6rem;display:flex;flex-direction:column;border:1px solid var(--gold);background:linear-gradient(165deg,#173a28,#0b1b12)}
+.face.bk{transform:rotateY(180deg);background:linear-gradient(165deg,#efe5cb,#e0d2aa);color:var(--ink)}
+.face h3{font-weight:400;font-size:1.7rem;line-height:1.12;margin:auto 0 .8rem}
+.face .fl{font:.9rem var(--sans);color:var(--gold2);border-top:1px dashed rgba(185,154,83,.6);padding-top:.8rem}
+.face .ft{font:.72rem var(--sans);letter-spacing:.14em;color:#8e9a90;margin-top:1.2rem}
+.face.bk h3{font-size:1.15rem;margin:0 0 1rem;color:#6a5726}
+.face.bk p{margin:0;font-size:1.05rem}
+.sc{position:absolute;right:1.2rem;top:1rem;width:56px;height:56px;opacity:.9}
+
+/* bowl */
+.cm{background:linear-gradient(var(--night),#0b2015)}
+.scene{position:relative;height:230px;margin:2rem 0 1.4rem;border:1px solid rgba(185,154,83,.5);overflow:hidden;background:linear-gradient(#0e2a1b,#163d27)}
+.scene .st{position:absolute;left:5%;right:5%;bottom:0;top:46%;background:#bba66d;opacity:.28;clip-path:polygon(0 38%,100% 0,100% 100%,0 100%)}
+.scene svg{position:absolute;right:5%;bottom:34px;width:26px}
+.bwl{position:absolute;left:3.5%;bottom:40px;width:12px;height:56px;border-radius:6px 6px 0 0;background:var(--gold2);opacity:.75}
+.ball{position:absolute;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--seam);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.25);left:8%;bottom:140px;animation:bx .85s linear forwards,by .85s forwards}
+@keyframes bx{to{left:84%}}
+@keyframes by{0%{bottom:150px;animation-timing-function:ease-in}55%{bottom:32px;animation-timing-function:ease-out}100%{bottom:64px}}
+.stamp{position:absolute;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
+.stamp div{animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+.stamp b{display:block;font:400 clamp(2.6rem,10vw,5rem)/1 var(--serif);letter-spacing:.06em;text-shadow:0 0 30px rgba(0,0,0,.6)}
+.stamp small{font:.75rem var(--sans);letter-spacing:.24em;color:var(--gold2)}
+@keyframes pop{from{opacity:0;transform:scale(.4) rotate(-6deg)}}
+.stamp .six{color:#f0d890}.stamp .four{color:#9ec9a8}.stamp .out{color:#d98a8a}.stamp .wd,.stamp .dot{color:var(--ivory)}.stamp .sp{color:#f3ecd9;text-shadow:0 0 24px #d4bd85}
+.score{display:flex;gap:2rem;flex-wrap:wrap;font:.8rem var(--sans);letter-spacing:.16em;color:var(--gold2);margin-bottom:1rem}
+#cl{font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.5;min-height:6.2em;max-width:44rem}
+
+/* fame */
+.fame{background:var(--green2)}
+.aw{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.pl{display:grid;min-height:240px;padding:1.6rem;text-align:left;border:1px solid var(--gold);background:radial-gradient(circle at var(--mx,50%) var(--my,0),rgba(212,189,133,.28),transparent 55%),linear-gradient(#0e2418,#08130d);transform:perspective(800px) rotateX(var(--rx,0)) rotateY(var(--ry,0));transition:transform .2s}
+.pl>*{grid-area:1/1;transition:opacity .6s,transform .6s}
+.pl .bk{opacity:0;transform:translateY(14px);align-self:center}.pl.rv .fr{opacity:0;transform:translateY(-14px);pointer-events:none}.pl.rv .bk{opacity:1;transform:none}
+.pl .fr{display:flex;flex-direction:column;justify-content:space-between}
+.pl h3{font-weight:400;font-size:1.45rem;line-height:1.2}
+.pl small{font:.72rem var(--sans);letter-spacing:.16em;color:var(--gold2)}
+.pl .who{font-size:2.3rem;letter-spacing:.08em;color:var(--gold2);margin:.2rem 0 .6rem}
+.pl .bk p{font-size:1rem;color:#dcd5be}
+.pl:last-child{grid-column:1/-1}
+
+/* beyond */
+.bey{background:linear-gradient(var(--green2) 0,#4b6a58 14%,#c9d0ba 30%,var(--paper) 42%);color:var(--ink);padding-bottom:12rem}
+.bey h2{color:var(--ivory);max-width:13ch;font-size:clamp(2.5rem,8vw,5.2rem);margin-bottom:28vh}
+.ln{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.35;max-width:30ch;margin-bottom:34vh;color:rgba(42,42,34,.16);transition:color .9s}
+.ln.on{color:var(--ink)}.ln.last{margin-bottom:0}
+
+/* letter */
+.lt{background:var(--paper);color:var(--ink);text-align:center;padding-top:2rem}
+.env{position:relative;width:min(330px,86vw);height:215px;margin:2.5rem auto 0;background:#e2d3ab;border:1px solid #a98f4c;box-shadow:0 18px 34px rgba(60,50,20,.28);transition:.6s}
+.env .fp{position:absolute;inset:0 0 auto;height:62%;background:#d6c48f;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s}
+.env .sl{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#b04545,var(--seam) 60%,#5e1a1a);display:grid;place-items:center;color:#e7c6c6;font-size:1.35rem;transition:.4s;box-shadow:0 3px 6px rgba(0,0,0,.35)}
+.env.pre .fp{transform:rotateX(180deg)}.env.pre .sl{opacity:0}
+.env.gone{opacity:0;height:0;margin:0;border:0;overflow:hidden}
+.env .to{position:absolute;bottom:1.2rem;left:0;right:0;font-style:italic;font-size:1.2rem}
+.sw{display:grid;grid-template-rows:0fr;transition:grid-template-rows 1s}.sw.show{grid-template-rows:1fr}.sw>div{overflow:hidden}
+.sheet{max-width:650px;margin:2rem auto 0;text-align:left;background:#fbf7ea;border:1px solid #d9caa0;box-shadow:0 20px 44px rgba(60,50,20,.2);padding:clamp(1.6rem,5vw,3.4rem);background-image:repeating-linear-gradient(transparent 0 33px,rgba(150,130,80,.14) 33px 34px)}
+.sheet p{margin-bottom:1.1rem;line-height:34px;font-size:1.08rem}
+.sheet[contenteditable=true]{outline:2px dashed var(--gold);outline-offset:6px}
+.tools{margin-top:1.8rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.lt .btn{color:#6a5726;border-color:#8a7338}.lt .btn:hover{background:#8a7338;color:var(--ivory)}
+.hint{font:.8rem var(--sans);color:#6c6a58;margin:.8rem 0 2rem;min-height:1.2em}
+
+/* finale */
+.fin{min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0,#17432b,var(--night) 70%)}
+.fin canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.fin-in{position:relative;z-index:2;display:grid;gap:1.8rem;justify-items:center}
+.fin h2{font-size:clamp(2.2rem,7.4vw,5.4rem);letter-spacing:.04em;text-transform:uppercase;line-height:1.05}
+.fin .ch{animation-play-state:paused}.fin.in .ch{animation-play-state:running}
+.fin p{max-width:30rem;color:#d9d2bb;font-size:1.15rem}
+footer{font:.72rem var(--sans);letter-spacing:.14em;color:#6f7b70;text-align:center;padding:1.4rem}
+@media(max-width:700px){body{font-size:17px}.bar{grid-template-columns:1fr auto}.bar i{grid-column:1/-1;order:3}.lamp:nth-child(4),.lamp:nth-child(5){display:none}.pl:last-child{grid-column:auto}.n19{opacity:.6}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect,useRef}=React, h=React.createElement;
+const calm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ================= EDIT YOUR CONTENT HERE ================= */
+const HEADLINES=["BREAKING: Snehitha has a story. Sources describe it as “short”.","UPDATE: The five-minute chat is now in its third hour. Both sides have agreed to stay on.","WEATHER: Light rain expected. Gossip forecast remains heavy.","TRANSFER NEWS: Nobody is leaving this friend group. Contracts are for life.","REPORT: Silence recorded for four seconds. Investigation under way.","LIVE: Birthday celebrations continue. The player of the day has not stopped talking."];
+const BARS=[["Story stamina","Unlimited",100],["Gossip intelligence","Elite",96],["Energy","Does not drain",100],["Loyalty to friends","Total",100],["Short versions","Statistically rare",12]];
+const QUOTES=["An exceptional ability to turn a five-minute conversation into an entire evening.","Always available for a new story. Occasionally responsible for starting one.","Her greatest strength: showing up for her people."];
+const HIGHLIGHTS=[["The endless supply of stories","Not one quiet net session on record.","Ask how her day was and clear your schedule. The story comes with context, characters and, occasionally, a sequel."],["The love of gossip","First on the scene, every time.","News reaches her faster than any official channel. She handles it responsibly, mostly by passing it to the right people at the right moment."],["The infectious energy","Plays every day like it’s a final.","She walks in and the room gets louder, in the good way. Nobody has found the off switch, and nobody has looked very hard."],["The laughter","Reliable under pressure.","Comic timing that can’t be coached. One raised eyebrow and the words “wait, listen” can rescue a bad afternoon."],["The friendships","A fixture at every match that matters.","Birthdays, bad days, last-minute plans: she turns up. This is the highlight reel that counts."]];
+/* [outcome label, css class, runs, commentary] */
+const BALLS=[
+["SIX","six",6,"And she’s back with another story! The audience is listening. Nobody knows how long this innings will last."],
+["SIX","six",6,"The player demonstrates remarkable stamina. Three conversations, four stories and absolutely no signs of slowing down."],
+["SIX","six",6,"That story had three flashbacks and a plot twist. Gone over the roof, and the scorers are asking for a longer scorecard."],
+["FOUR","four",4,"An unexpected gossip update! The fielders are confused, but the commentary team is thoroughly entertained."],
+["FOUR","four",4,"A rumour has entered the ground. Security has no authority here. The crowd is on its feet."],
+["FOUR","four",4,"“You won’t believe what happened.” We believe it. We just need to know how long we have."],
+["APPEAL","out",0,"Is that out? The umpire says no. Nobody has ever managed to dismiss this innings, and several have tried."],
+["APPEAL","out",0,"She says “short version”. Caught behind by the first tangent. Not out, obviously. Never out."],
+["WIDE","wd",1,"Wide! A sudden tangent sends the story into a completely different postcode, and everyone follows."],
+["WIDE","wd",1,"Somebody mentions they’re busy. The player treats this as a minor interruption and carries on."],
+["DOT BALL","dot",0,"A quiet moment on the field. It lasts four seconds. Historians will remember it fondly."],
+["DOT BALL","dot",0,"Dot ball. She’s deciding which story to open with next. This is the dangerous part."],
+["SPECIAL","sp",0,"A friend needs a hand, and she’s there before the request is finished. No runs for it, and still the best shot of the day."],
+["SPECIAL","sp",0,"The laughter rolling in from the stands is, quite honestly, the real scoreboard."]];
+const AWARDS=[["Outstanding Achievement in Storytelling","For making a walk to the canteen sound like an expedition, and for making us want every detail."],["Lifetime Achievement in Gossip","Nineteen years of dedicated service. Sources remain confidential. Reliability remains disputed."],["Most Valuable Friend","Awarded without debate. The panel voted in about four seconds, which is quick for a panel."],["Excellence in Making People Laugh","For the teasing, the timing and that particular look that means she’s about to say something."],["The Unmatched Energy Award","For arriving at full speed and staying there. The judges asked if they could sit down."]];
+const BEYOND=["Snehitha is one of them.","She doesn’t announce it. It happens in small ways: she notices who has gone quiet, pulls in the person who was left out, and makes plans that include everyone.","Her friendships aren’t something she fits around the rest of her life. They come first, and the people lucky enough to be in them can tell.","A slow afternoon, a long walk, a Tuesday with nothing happening: these turn into something worth remembering because she’s there.","That isn’t a small thing. Her presence matters, and it matters to a lot of people."];
+const LETTER=["Dear Snehitha,",
+"YOOO AKKOWWWW, where do i even start???? ok ee website chusi nuvvu cringe avvaku.. i rlly hope u like it!! naaku em ivvalo thelile.. i thought this could be a good one.",
+"Snehitha, we've known each other for over 3 yrs now.. 3 YRS is too long for someone who thought “abba naaku ee pilla nachadhu”.. bro nuvvu entha sweet oo okka manishiki vaala life lo nuvvu endhuku importanto naaku ee madhyana ba ardham authundhi.. nuvvu na comfort place ra, u r always there for me, nenu ey chetha cheppina intaav, nenu call chesina prathi chaalaa manchiga kaburlu chepthav, bro seriously u r a mix of everything broo..",
+"u are sooo gooddd at being chaotic, gossiping but just as good at being there for ppl in ur own ways.. okka manishi neetho maatlade mundhu entha low feel ayna neetho maatladithe chaalu pakka aa manishi navvalsindhe .. i rlly love u so much Snehaaaa. Thank you for always being there for me, thank you for always giving me a shoulder to lean on. You've no idea how many times u made my mood better just by talking to me..",
+"I genuinely wish you get everything u dream of, and be the happiest and plss continue being the energy packet u r now. I also wish u heal from things u dont talk abt. U've no idea how much i miss u bro, like srsly i miss y'all soo muchh it actually hurts uk.. i rlly hope we can meet soon.",
+"AND FINALLY HAPPIEST BIRTHDAY TO THE PERSON WHO DESERVES THE WORLD!!!",
+"With love,<br>YOU NITHYA 😘"];
+/* ========================================================== */
+
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+function useIn(t=.3){const r=useRef(),[v,s]=useState(false);useEffect(()=>{const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){s(true);o.disconnect()}},{threshold:t});o.observe(r.current);return()=>o.disconnect()},[]);return[r,v]}
+function Split({t,d=0,s=.035}){let i=0;return t.split(" ").map((w,k)=>h("span",{key:k,className:"w"},[...w].map((c,j)=>h("span",{key:j,className:"ch",style:{animationDelay:d+i++*s+"s"}},c))))}
+const go=id=>document.getElementById(id).scrollIntoView({behavior:calm?"auto":"smooth"});
+
+function Chrome(){
+  useEffect(()=>{const f=()=>{const m=document.documentElement;document.getElementById("bar").style.width=scrollY/(m.scrollHeight-innerHeight)*100+"%"};addEventListener("scroll",f,{passive:true});return()=>removeEventListener("scroll",f)},[]);
+  const row=HEADLINES.map((t,i)=>h("span",{key:i},t));
+  return h(React.Fragment,null,h("div",{id:"bar"}),h("div",{className:"ticker"},h("b",null,"SPL LIVE"),h("div",{className:"track"},row,HEADLINES.map((t,i)=>h("span",{key:"b"+i},t)))));
+}
+
+function Hero(){
+  return h("section",{className:"hero"},
+    h("div",{className:"stars"}),h("div",{className:"pitch"},h("i")),h("div",{className:"crowd"}),
+    [0,1,2,3].map(i=>h("div",{key:i,className:"lamp"})),
+    h("div",{className:"hero-in"},
+      h("p",{className:"fix"},"A special birthday fixture"),
+      h("h1",null,h(Split,{t:"The Snehitha",d:2}),h("br"),h(Split,{t:"Premier League",d:2.5})),
+      h("p",{className:"ed"},"2026 EDITION"),
+      h("div",{className:"bug"},[["PLAYER","SNEHITHA"],["AGE","19"],["OCCASION","HER BIRTHDAY"],["STATUS","THE PLAYER OF THE DAY"]].map(([a,b])=>h("div",{key:a},h("small",null,a),h("b",null,b)))),
+      h("button",{className:"btn",onClick:()=>go("player")},"Enter the stadium")));
+}
+
+function Player(){
+  const [r,v]=useIn(.2);
+  return h("section",{id:"player",className:"player cut",ref:r},h("div",{className:"n19","aria-hidden":true},"19"),
+    h("div",{className:"wrap"+(v?" in":"")},
+      h("p",{className:"role"},"Player profile · All-rounder"),
+      h("h2",{className:"pname"},"Snehitha"),
+      h("p",{className:"role",style:{marginBottom:0}},"Storyteller, gossip correspondent, team morale"),
+      h("div",{className:"bars"},BARS.map(([k,t,w])=>h("div",{className:"bar",key:k},h("span",null,k),h("em",null,t),h("i",null,h("u",{style:{"--w":w+"%"}}))))),
+      QUOTES.map((q,i)=>h("div",{key:i,className:"l3"+(v?" in":""),style:{transitionDelay:.4+i*.3+"s"}},h("b",null,"“"),h("p",null,q)))));
+}
+
+function Highlights(){
+  const [open,setOpen]=useState({});
+  return h("section",{className:"hl cut r"},h("div",{className:"wrap"},
+    h("h2",null,"Career highlights"),
+    h("p",{className:"sans",style:{color:"#aab5ab",margin:".8rem 0 0",fontSize:".9rem"}},"Swipe along the reel. Tap a ticket for the full match report.")),
+    h("div",{className:"reel"},HIGHLIGHTS.map(([t,f,b],i)=>h("button",{key:i,className:"tk"+(open[i]?" f":""),"aria-pressed":!!open[i],onClick:()=>setOpen({...open,[i]:!open[i]})},
+      h("div",null,
+        h("div",{className:"face"},h("svg",{className:"sc",viewBox:"0 0 56 56",fill:"none",stroke:"#b99a53","aria-hidden":true},h("circle",{cx:28,cy:28,r:22}),h("path",{d:"M14 12c10 10 10 22 0 32M42 12c-10 10-10 22 0 32",strokeDasharray:"3 4"})),h("h3",null,t),h("p",{className:"fl"},f),h("span",{className:"ft"},"TAP FOR THE MATCH REPORT")),
+        h("div",{className:"face bk"},h("h3",null,t),h("p",null,b)))))));
+}
+
+function Bowl(){
+  const [s,set]=useState({n:0,runs:0,o:null,k:0,busy:false,line:"The players are out in the middle and the crowd has settled. Bowl the first delivery."});
+  const q=useRef([]);
+  const bowl=()=>{
+    if(s.busy)return;
+    set(x=>({...x,busy:true,o:null,k:x.k+1}));
+    setTimeout(()=>{
+      if(!q.current.length)q.current=shuffle([...BALLS.keys()]);
+      const b=BALLS[q.current.pop()];
+      set(x=>({...x,busy:false,n:x.n+1,runs:x.runs+b[2],o:b,line:b[3]}));
+    },calm?50:900);
+  };
+  const o=s.o;
+  return h("section",{className:"cm"},h("div",{className:"wrap"},
+    h("h2",null,"The commentary box"),
+    h("p",{className:"sans",style:{color:"#aab5ab",margin:".8rem 0 0",fontSize:".9rem"}},"Bowl a delivery. The commentary team will tell you what happened."),
+    h("div",{className:"scene"},h("div",{className:"st"}),h("div",{className:"bwl"}),
+      h("svg",{viewBox:"0 0 26 60","aria-hidden":true},[3,12,21].map(x=>h("rect",{key:x,x,y:0,width:2.5,height:60,fill:"#d4bd85"}))),
+      s.k>0&&s.busy&&h("div",{className:"ball",key:s.k}),
+      o&&h("div",{className:"stamp"},h("div",{className:o[1]},h("b",null,o[0]),o[2]?h("small",null,"+"+o[2]+" RUNS"):null))),
+    h("div",{className:"score"},h("span",null,"OVER "+(s.n/6|0)+"."+s.n%6),h("span",null,"RUNS "+s.runs)),
+    h("p",{id:"cl","aria-live":"polite"},s.line),
+    h("button",{className:"btn",onClick:bowl,disabled:s.busy,style:{marginTop:"1.5rem"}},s.n?"Bowl the next one":"Bowl")));
+}
+
+function Plaque({c,w}){
+  const [rv,setRv]=useState(false);
+  const mv=e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height,st=e.currentTarget.style;st.setProperty("--mx",x*100+"%");st.setProperty("--my",y*100+"%");if(!calm){st.setProperty("--rx",(.5-y)*8+"deg");st.setProperty("--ry",(x-.5)*8+"deg")}};
+  const lv=e=>{const st=e.currentTarget.style;st.setProperty("--rx","0deg");st.setProperty("--ry","0deg")};
+  return h("button",{className:"pl"+(rv?" rv":""),onClick:()=>setRv(true),onMouseMove:mv,onMouseLeave:lv,"aria-label":rv?c:c+". Tap to open the envelope"},
+    h("div",{className:"fr"},h("small",null,"AWARD"),h("h3",null,c),h("small",null,"TAP TO OPEN THE ENVELOPE")),
+    h("div",{className:"bk"},h("small",null,"AND THE WINNER IS"),h("div",{className:"who"},"SNEHITHA"),h("p",null,w)));
+}
+const Fame=()=>h("section",{className:"fame cut"},h("div",{className:"wrap"},h("h2",null,"The Hall of Fame"),
+  h("p",{className:"sans",style:{color:"#b5c0b6",margin:".8rem 0 0",fontSize:".9rem"}},"The committee met briefly. The decisions were unanimous. Open each envelope."),
+  h("div",{className:"aw"},AWARDS.map(([c,w])=>h(Plaque,{key:c,c,w})))));
+
+function Line({t,last}){
+  const r=useRef(),[on,s]=useState(false);
+  useEffect(()=>{const o=new IntersectionObserver(([e])=>s(e.isIntersecting),{rootMargin:"-38% 0px -38% 0px"});o.observe(r.current);return()=>o.disconnect()},[]);
+  return h("p",{ref:r,className:"ln"+(on?" on":"")+(last?" last":"")},t);
+}
+const Beyond=()=>h("section",{className:"bey cut r"},h("div",{className:"wrap"},h("h2",null,"Some people make life a little lighter."),BEYOND.map((t,i)=>h(Line,{key:i,t,last:i==BEYOND.length-1}))));
+
+function Letter(){
+  const [st,setSt]=useState(0),[ed,setEd]=useState(false),[hint,setHint]=useState("");
+  const sh=useRef(),K="spl2026-letter",def=LETTER.map(p=>"<p>"+p+"</p>").join("");
+  useEffect(()=>{let s=null;try{s=localStorage.getItem(K)}catch(e){}sh.current.innerHTML=s||def},[]);
+  const open=()=>{setSt(1);setTimeout(()=>setSt(2),calm?0:700)};
+  const edit=()=>{if(!ed){setEd(true);setHint("Type directly on the letter. Press Save when you’re done.");setTimeout(()=>sh.current.focus(),0)}else{setEd(false);try{localStorage.setItem(K,sh.current.innerHTML);setHint("Saved in this browser. To make it permanent, paste your text into the LETTER list in index.html.")}catch(e){setHint("Couldn’t save here. Paste your text into index.html to keep it.")}}};
+  const reset=()=>{sh.current.innerHTML=def;setEd(false);try{localStorage.removeItem(K)}catch(e){}setHint("Original letter restored.")};
+  return h("section",{className:"lt"},h("div",{className:"wrap"},
+    h("h2",null,"A letter for the player"),
+    h("p",{className:"sans",style:{color:"#6c6a58",margin:".6rem 0 0",fontSize:".9rem"}},"There’s one thing in here that isn’t a joke."),
+    h("button",{className:"env"+(st?" pre":"")+(st==2?" gone":""),onClick:open,"aria-label":"Open the letter"},h("span",{className:"fp"}),h("span",{className:"sl"},"S"),h("span",{className:"to"},"For Snehitha")),
+    h("div",{className:"sw"+(st==2?" show":"")},h("div",null,
+      h("div",{ref:sh,className:"sheet",contentEditable:ed,suppressContentEditableWarning:true}),
+      h("div",{className:"tools"},h("button",{className:"btn",onClick:edit},ed?"Save letter":"Edit letter"),h("button",{className:"btn",onClick:reset},"Restore original")),
+      h("p",{className:"hint"},hint)))));
+}
+
+function Finale(){
+  const cv=useRef(),sec=useRef(),fx=useRef({});
+  useEffect(()=>{
+    const c=cv.current,x=c.getContext("2d"),C=["#d4bd85","#b99a53","#f3ecd9","#6f9a7b","#8c2b2b"],P=[],S={W:0,H:0,run:false};let tm;
+    const rs=()=>{const r=c.parentElement.getBoundingClientRect(),d=devicePixelRatio||1;S.W=r.width;S.H=r.height;c.width=S.W*d;c.height=S.H*d;x.setTransform(d,0,0,d,0,0)};
+    const pk=a=>a[Math.random()*a.length|0];
+    const tick=()=>{x.clearRect(0,0,S.W,S.H);for(let i=P.length-1;i>=0;i--){const p=P[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.k){p.a+=p.va;p.vx+=Math.sin(p.a)*.02;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore();if(p.y>S.H+20)P.splice(i,1)}
+      else{p.vy+=.03;p.vx*=.99;p.l-=.011;x.globalAlpha=Math.max(p.l,0);x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,2,0,7);x.fill();x.globalAlpha=1;if(p.l<=0)P.splice(i,1)}}
+      if(P.length)requestAnimationFrame(tick);else S.run=false};
+    const kick=()=>{if(!S.run){S.run=true;requestAnimationFrame(tick)}};
+    const burst=()=>{const X=S.W*(.15+Math.random()*.7),Y=S.H*(.12+Math.random()*.35),col=pk(C);for(let i=0;i<48;i++){const a=Math.PI*2*i/48,s=1.2+Math.random()*2.2;P.push({k:0,x:X,y:Y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:1,c:col})}kick()};
+    const conf=()=>{for(let i=0;i<110;i++)P.push({k:1,x:Math.random()*S.W,y:-20-Math.random()*S.H*.4,vx:(Math.random()-.5)*1.4,vy:1.2+Math.random()*2,a:Math.random()*6,va:(Math.random()-.5)*.2,w:5+Math.random()*4,h:8+Math.random()*5,c:pk(C)});kick()};
+    fx.current.again=()=>{if(!calm){conf();burst();setTimeout(burst,350)}};
+    rs();addEventListener("resize",rs);
+    const o=new IntersectionObserver(([e])=>{clearInterval(tm);if(e.isIntersecting){sec.current.classList.add("in");if(!calm){conf();burst();tm=setInterval(burst,1800)}}},{threshold:.5});o.observe(sec.current);
+    return()=>{o.disconnect();clearInterval(tm);removeEventListener("resize",rs)};
+  },[]);
+  return h("section",{className:"fin",ref:sec},h("canvas",{ref:cv}),h("div",{className:"fin-in"},
+    h("h2",null,h(Split,{t:"Happy 19th birthday, Snehitha!",d:.2,s:.04})),
+    h("p",null,"Here’s to another year of stories, laughter, unforgettable memories and friendships that make life beautiful."),
+    h("button",{className:"btn",onClick:()=>fx.current.again()},"Celebrate again")));
+}
+
+const App=()=>h(React.Fragment,null,h(Chrome),h(Hero),h(Player),h(Highlights),h(Bowl),h(Fame),h(Beyond),h(Letter),h(Finale),h("footer",null,"THE SNEHITHA PREMIER LEAGUE · 2026 EDITION"));
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
+</body>
+</html>
